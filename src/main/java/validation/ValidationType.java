@@ -4,9 +4,9 @@
 package validation;
 
 /**
- * @author JP
+ * 
  *
  */
-public enum ResourceType {
+public enum ValidationType {
 	//TODO
 }

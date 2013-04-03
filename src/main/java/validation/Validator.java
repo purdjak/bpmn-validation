@@ -4,14 +4,14 @@
 package validation;
 
 /**
- * @author JP
+ * 
  *
  */
 public class Validator {
-	private ErrorHandler eHandler;
+	private MessageHandler mHandler;
 	
-	public void setErrorHandler(ErrorHandler eHandler){
-		this.eHandler = eHandler;
+	public void setMessageHandler(MessageHandler mHandler){
+		this.mHandler = mHandler;
 	}
 		
 	/**
@@ -20,19 +20,19 @@ public class Validator {
 	 * @param type
 	 * @param name
 	 */
-	public void addValidation(java.net.URL resourceURL, ResourceType type, String name){
+	public void addValidation(java.net.URL resourceURL, ValidationType type, String name){
 		//TODO
 	}
 
-	public void addValidation(java.io.File resourceURL, ResourceType type, String name){
+	public void addValidation(java.io.File resourceFile, ValidationType type, String name){
 		//TODO
 	}
 	
-	public void validation(java.net.URL in){
+	public void validate(java.net.URL in){
 		//TODO
 	}
 	
-	public void validation(java.io.File in){
+	public void validate(java.io.File in){
 		//TODO
 	}
 	
