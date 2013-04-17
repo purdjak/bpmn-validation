@@ -3,37 +3,82 @@
  */
 package validation;
 
+import java.io.File;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * 
- *
+ * A processor that checks BPMN model against validation rules.
  */
 public class Validator {
+	private List <ValidationEngineAbstract> validatorEngines;
 	private MessageHandler mHandler;
 	
+	/**
+	 * Constructor will create a validator with empty validation list. 
+	 */
+	public Validator(){
+		this.validatorEngines = new ArrayList<>();
+		this.mHandler = null;
+	}
+	
+	/**
+	 * Sets the MessageHandler to receive messages encountered during the validate method invocation. 
+	 * @param mHandler
+	 */
 	public void setMessageHandler(MessageHandler mHandler){
 		this.mHandler = mHandler;
 	}
 		
 	/**
-	 * 
-	 * @param resourceURL If it is null then it will use the default source.
-	 * @param type
-	 * @param name
+	 * Appends the specified validation to the end of validation list.
+	 * @param resourceURL Set of validation rules.
+	 * @param type Format of validation rules.
+	 * @param name Name of the validation. Name will be used in MessageHandler.
+	 * @throws ValidationException 
 	 */
-	public void addValidation(java.net.URL resourceURL, ValidationType type, String name){
-		//TODO
+	public void addValidation(java.net.URL resourceURL, ValidationType type, String name) throws ValidationException{
+		try {
+			addValidation(new File(resourceURL.toURI()), type, name);
+		} catch (URISyntaxException ex) {
+			throw new ValidationException(ex);
+		}
 	}
 
-	public void addValidation(java.io.File resourceFile, ValidationType type, String name){
-		//TODO
+	/**
+	 * Appends the specified validation to the end of validation list.
+	 * @param resourceFile Set of validation rules.
+	 * @param type Format of validation rules.
+	 * @param name Name of the validation. Name will be used in MessageHandler.
+	 * @throws ValidationException 
+	 */
+	public void addValidation(java.io.File resourceFile, ValidationType type, String name) throws ValidationException{
+		validatorEngines.add( ValidationEngineFactory.newValidationEngine(resourceFile, type, name) );
 	}
 	
-	public void validate(java.net.URL in){
-		//TODO
+	/**
+	 * Validates the specified BPMN input. Validator will use a specified validation list.
+	 * @param in BPMN to be validated. BPMN input must be XML document. 
+	 * @throws ValidationException 
+	 */
+	public void validate(java.net.URL in) throws ValidationException {
+		try {
+			validate(new File(in.toURI()));
+		} catch (URISyntaxException ex) {
+			throw new ValidationException(ex);
+		}
 	}
 	
-	public void validate(java.io.File in){
-		//TODO
+	/**
+	 * Validates the specified BPMN input. Validator will use a specified validation list.
+	 * @param in BPMN to be validated. BPMN input must be XML document. 
+	 * @throws ValidationException
+	 */
+	public void validate(java.io.File in) throws ValidationException {
+		for(ValidationEngineAbstract va : validatorEngines){			
+				va.validate(in, mHandler);			
+		}
 	}
 	
 }

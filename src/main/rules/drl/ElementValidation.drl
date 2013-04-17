@@ -1,0 +1,1751 @@
+package validation
+import org.jdom2.Element;
+global MessageHandler gMessageHandler;
+global ValidationType gType;
+global String gName;
+
+rule "SupportedElement_218"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DC" && $el.getName() == "Bounds" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Bounds\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Bounds\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DC\". ");
+end
+
+rule "SupportedElement_217"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DC" && $el.getName() == "Point" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Point\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Point\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DC\". ");
+end
+
+rule "SupportedElement_216"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DC" && $el.getName() == "Font" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Font\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Font\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DC\". ");
+end
+
+rule "SupportedElement_215"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "waypoint" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"waypoint\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"waypoint\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_214"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "extension" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"extension\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"extension\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_213"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "LabeledShape" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"LabeledShape\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"LabeledShape\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_212"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "Label" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Label\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Label\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_211"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "LabeledEdge" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"LabeledEdge\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"LabeledEdge\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_210"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "Plane" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Plane\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Plane\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_209"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "Shape" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Shape\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Shape\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_208"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "Edge" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Edge\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Edge\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_207"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "Node" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Node\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Node\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_206"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "Style" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Style\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Style\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_205"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "Diagram" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"Diagram\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"Diagram\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_204"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/DD/20100524/DI" && $el.getName() == "DiagramElement" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"DiagramElement\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"DiagramElement\" belongs to namespace \"http://www.omg.org/spec/DD/20100524/DI\". ");
+end
+
+rule "SupportedElement_203"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/DI" && $el.getName() == "BPMNEdge" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"BPMNEdge\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"BPMNEdge\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/DI\". ");
+end
+
+rule "SupportedElement_202"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/DI" && $el.getName() == "BPMNLabel" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"BPMNLabel\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"BPMNLabel\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/DI\". ");
+end
+
+rule "SupportedElement_201"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/DI" && $el.getName() == "BPMNShape" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"BPMNShape\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"BPMNShape\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/DI\". ");
+end
+
+rule "SupportedElement_200"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/DI" && $el.getName() == "BPMNLabelStyle" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"BPMNLabelStyle\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"BPMNLabelStyle\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/DI\". ");
+end
+
+rule "SupportedElement_199"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/DI" && $el.getName() == "BPMNPlane" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"BPMNPlane\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"BPMNPlane\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/DI\". ");
+end
+
+rule "SupportedElement_198"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/DI" && $el.getName() == "BPMNDiagram" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"BPMNDiagram\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"BPMNDiagram\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/DI\". ");
+end
+
+rule "SupportedElement_197"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "userTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"userTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"userTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_196"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "transaction" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"transaction\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"transaction\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_195"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "timeCycle" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"timeCycle\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"timeCycle\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_194"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "timeDuration" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"timeDuration\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"timeDuration\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_193"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "timeDate" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"timeDate\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"timeDate\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_192"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "timerEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"timerEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"timerEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_191"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "eventDefinitionRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"eventDefinitionRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"eventDefinitionRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_190"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "throwEvent" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"throwEvent\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"throwEvent\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_189"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "text" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"text\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"text\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_188"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "textAnnotation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"textAnnotation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"textAnnotation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_187"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "terminateEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"terminateEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"terminateEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_186"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "task" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"task\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"task\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_185"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "subProcess" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"subProcess\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"subProcess\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_184"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "subConversation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"subConversation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"subConversation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_183"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "subChoreography" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"subChoreography\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"subChoreography\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_182"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "startEvent" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"startEvent\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"startEvent\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_181"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "loopCondition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"loopCondition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"loopCondition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_180"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "standardLoopCharacteristics" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"standardLoopCharacteristics\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"standardLoopCharacteristics\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_179"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "signalEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"signalEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"signalEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_178"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "signal" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"signal\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"signal\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_177"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "serviceTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"serviceTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"serviceTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_176"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "conditionExpression" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"conditionExpression\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"conditionExpression\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_175"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "sequenceFlow" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"sequenceFlow\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"sequenceFlow\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_174"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "sendTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"sendTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"sendTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_173"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "script" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"script\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"script\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_172"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "scriptTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"scriptTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"scriptTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_171"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "rootElement" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"rootElement\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"rootElement\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_170"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "resourceRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"resourceRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"resourceRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_169"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "resourceRole" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"resourceRole\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"resourceRole\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_168"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "resourceParameterBinding" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"resourceParameterBinding\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"resourceParameterBinding\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_167"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "resourceParameter" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"resourceParameter\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"resourceParameter\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_166"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "resourceAssignmentExpression" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"resourceAssignmentExpression\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"resourceAssignmentExpression\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_165"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "resource" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"resource\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"resource\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_164"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "rendering" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"rendering\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"rendering\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_163"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "target" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"target\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"target\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_162"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "source" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"source\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"source\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_161"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "relationship" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"relationship\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"relationship\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_160"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "receiveTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"receiveTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"receiveTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_159"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "property" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"property\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"property\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_158"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "supports" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"supports\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"supports\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_157"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "process" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"process\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"process\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_156"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "potentialOwner" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"potentialOwner\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"potentialOwner\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_155"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "performer" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"performer\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"performer\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_154"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "participantRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"participantRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"participantRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_153"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "partnerRole" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"partnerRole\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"partnerRole\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_152"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "participantRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"participantRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"participantRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_151"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "partnerEntity" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"partnerEntity\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"partnerEntity\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_150"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "participantMultiplicity" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"participantMultiplicity\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"participantMultiplicity\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_149"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "outerParticipantRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"outerParticipantRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"outerParticipantRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_148"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "innerParticipantRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"innerParticipantRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"innerParticipantRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_147"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "participantAssociation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"participantAssociation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"participantAssociation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_146"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "endPointRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"endPointRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"endPointRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_145"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "interfaceRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"interfaceRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"interfaceRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_144"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "participant" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"participant\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"participant\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_143"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "parallelGateway" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"parallelGateway\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"parallelGateway\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_142"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "inputSetRefs" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"inputSetRefs\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"inputSetRefs\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_141"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "whileExecutingOutputRefs" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"whileExecutingOutputRefs\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"whileExecutingOutputRefs\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_140"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "optionalOutputRefs" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"optionalOutputRefs\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"optionalOutputRefs\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_139"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataOutputRefs" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataOutputRefs\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataOutputRefs\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_138"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "outputSet" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"outputSet\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"outputSet\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_137"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "errorRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"errorRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"errorRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_136"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "outMessageRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"outMessageRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"outMessageRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_135"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "inMessageRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"inMessageRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"inMessageRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_134"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "operation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"operation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"operation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_133"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "completionCondition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"completionCondition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"completionCondition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_132"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "outputDataItem" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"outputDataItem\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"outputDataItem\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_131"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "inputDataItem" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"inputDataItem\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"inputDataItem\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_130"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "loopDataOutputRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"loopDataOutputRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"loopDataOutputRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_129"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "loopDataInputRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"loopDataInputRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"loopDataInputRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_128"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "loopCardinality" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"loopCardinality\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"loopCardinality\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_127"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "multiInstanceLoopCharacteristics" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"multiInstanceLoopCharacteristics\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"multiInstanceLoopCharacteristics\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_126"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "monitoring" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"monitoring\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"monitoring\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_125"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "messageFlowAssociation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"messageFlowAssociation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"messageFlowAssociation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_124"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "messageFlow" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"messageFlow\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"messageFlow\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_123"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "operationRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"operationRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"operationRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_122"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "messageEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"messageEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"messageEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_121"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "message" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"message\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"message\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_120"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "manualTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"manualTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"manualTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_119"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "loopCharacteristics" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"loopCharacteristics\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"loopCharacteristics\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_118"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "target" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"target\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"target\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_117"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "source" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"source\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"source\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_116"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "linkEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"linkEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"linkEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_115"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "laneSet" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"laneSet\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"laneSet\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_114"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "childLaneSet" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"childLaneSet\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"childLaneSet\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_113"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "flowNodeRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"flowNodeRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"flowNodeRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_112"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "partitionElement" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"partitionElement\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"partitionElement\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_111"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "lane" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"lane\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"lane\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_110"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "itemDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"itemDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"itemDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_109"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "ioSpecification" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"ioSpecification\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"ioSpecification\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_108"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "ioBinding" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"ioBinding\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"ioBinding\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_107"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "intermediateThrowEvent" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"intermediateThrowEvent\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"intermediateThrowEvent\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_106"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "intermediateCatchEvent" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"intermediateCatchEvent\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"intermediateCatchEvent\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_105"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "interface" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"interface\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"interface\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_104"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "outputSetRefs" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"outputSetRefs\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"outputSetRefs\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_103"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "whileExecutingInputRefs" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"whileExecutingInputRefs\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"whileExecutingInputRefs\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_102"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "optionalInputRefs" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"optionalInputRefs\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"optionalInputRefs\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_101"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataInputRefs" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataInputRefs\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataInputRefs\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_100"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "inputSet" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"inputSet\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"inputSet\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_99"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "inclusiveGateway" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"inclusiveGateway\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"inclusiveGateway\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_98"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "implicitThrowEvent" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"implicitThrowEvent\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"implicitThrowEvent\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_97"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "humanPerformer" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"humanPerformer\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"humanPerformer\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_96"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "group" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"group\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"group\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_95"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "globalUserTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"globalUserTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"globalUserTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_94"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "globalTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"globalTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"globalTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_93"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "globalScriptTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"globalScriptTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"globalScriptTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_92"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "globalManualTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"globalManualTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"globalManualTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_91"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "globalConversation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"globalConversation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"globalConversation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_90"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "globalChoreographyTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"globalChoreographyTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"globalChoreographyTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_89"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "globalBusinessRuleTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"globalBusinessRuleTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"globalBusinessRuleTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_88"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "gateway" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"gateway\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"gateway\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_87"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "formalExpression" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"formalExpression\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"formalExpression\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_86"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "outgoing" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"outgoing\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"outgoing\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_85"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "incoming" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"incoming\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"incoming\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_84"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "flowNode" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"flowNode\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"flowNode\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_83"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "categoryValueRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"categoryValueRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"categoryValueRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_82"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "flowElement" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"flowElement\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"flowElement\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_81"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "extensionElements" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"extensionElements\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"extensionElements\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_80"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "extension" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"extension\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"extension\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_79"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "expression" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"expression\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"expression\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_78"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "exclusiveGateway" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"exclusiveGateway\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"exclusiveGateway\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_77"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "eventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"eventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"eventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_76"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "eventBasedGateway" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"eventBasedGateway\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"eventBasedGateway\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_75"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "event" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"event\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"event\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_74"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "escalationEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"escalationEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"escalationEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_73"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "escalation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"escalation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"escalation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_72"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "errorEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"errorEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"errorEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_71"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "error" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"error\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"error\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_70"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "endPoint" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"endPoint\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"endPoint\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_69"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "endEvent" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"endEvent\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"endEvent\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_68"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "documentation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"documentation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"documentation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_67"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataStoreReference" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataStoreReference\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataStoreReference\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_66"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataStore" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataStore\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataStore\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_65"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataState" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataState\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataState\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_64"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataOutputAssociation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataOutputAssociation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataOutputAssociation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_63"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataOutput" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataOutput\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataOutput\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_62"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataObjectReference" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataObjectReference\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataObjectReference\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_61"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataObject" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataObject\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataObject\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_60"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataInputAssociation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataInputAssociation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataInputAssociation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_59"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataInput" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataInput\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataInput\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_58"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "transformation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"transformation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"transformation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_57"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "targetRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"targetRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"targetRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_56"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "sourceRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"sourceRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"sourceRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_55"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataAssociation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataAssociation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataAssociation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_54"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "correlationSubscription" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"correlationSubscription\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"correlationSubscription\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_53"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "messagePath" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"messagePath\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"messagePath\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_52"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "correlationPropertyRetrievalExpression" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"correlationPropertyRetrievalExpression\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"correlationPropertyRetrievalExpression\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_51"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "dataPath" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"dataPath\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"dataPath\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_50"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "correlationPropertyBinding" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"correlationPropertyBinding\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"correlationPropertyBinding\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_49"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "correlationProperty" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"correlationProperty\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"correlationProperty\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_48"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "correlationPropertyRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"correlationPropertyRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"correlationPropertyRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_47"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "correlationKey" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"correlationKey\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"correlationKey\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_46"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "messageFlowRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"messageFlowRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"messageFlowRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_45"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "participantRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"participantRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"participantRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_44"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "conversationNode" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"conversationNode\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"conversationNode\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_43"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "conversationLink" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"conversationLink\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"conversationLink\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_42"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "conversationAssociation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"conversationAssociation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"conversationAssociation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_41"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "conversation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"conversation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"conversation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_40"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "condition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"condition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"condition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_39"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "conditionalEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"conditionalEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"conditionalEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_38"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "activationCondition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"activationCondition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"activationCondition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_37"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "complexGateway" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"complexGateway\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"complexGateway\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_36"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "event" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"event\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"event\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_35"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "condition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"condition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"condition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_34"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "complexBehaviorDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"complexBehaviorDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"complexBehaviorDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_33"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "compensateEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"compensateEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"compensateEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_32"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "choreographyRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"choreographyRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"choreographyRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_31"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "collaboration" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"collaboration\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"collaboration\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_30"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "messageFlowRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"messageFlowRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"messageFlowRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_29"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "choreographyTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"choreographyTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"choreographyTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_28"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "participantRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"participantRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"participantRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_27"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "choreographyActivity" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"choreographyActivity\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"choreographyActivity\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_26"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "choreography" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"choreography\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"choreography\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_25"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "categoryValue" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"categoryValue\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"categoryValue\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_24"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "category" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"category\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"category\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_23"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "eventDefinitionRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"eventDefinitionRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"eventDefinitionRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_22"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "catchEvent" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"catchEvent\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"catchEvent\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_21"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "cancelEventDefinition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"cancelEventDefinition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"cancelEventDefinition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_20"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "callConversation" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"callConversation\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"callConversation\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_19"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "callChoreography" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"callChoreography\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"callChoreography\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_18"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "callActivity" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"callActivity\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"callActivity\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_17"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "supportedInterfaceRef" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"supportedInterfaceRef\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"supportedInterfaceRef\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_16"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "callableElement" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"callableElement\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"callableElement\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_15"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "businessRuleTask" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"businessRuleTask\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"businessRuleTask\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_14"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "boundaryEvent" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"boundaryEvent\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"boundaryEvent\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_13"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "baseElementWithMixedContent" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"baseElementWithMixedContent\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"baseElementWithMixedContent\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_12"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "baseElement" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"baseElement\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"baseElement\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_11"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "auditing" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"auditing\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"auditing\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_10"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "association" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"association\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"association\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_9"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "to" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"to\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"to\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_8"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "from" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"from\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"from\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_7"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "assignment" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"assignment\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"assignment\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_6"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "artifact" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"artifact\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"artifact\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_5"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "completionCondition" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"completionCondition\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"completionCondition\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_4"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "adHocSubProcess" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"adHocSubProcess\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"adHocSubProcess\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_3"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "activity" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"activity\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"activity\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_2"
+    when
+        $el : Element( !false && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "import" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"import\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"import\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+rule "SupportedElement_1"
+    when
+        $el : Element( !true && $el.getNamespaceURI() == "http://www.omg.org/spec/BPMN/20100524/MODEL" && $el.getName() == "definitions" )
+    then
+        gMessageHandler.warning(gType, gName, "Element \"definitions\" isn't supported. ");
+        gMessageHandler.note(gType, gName, "Element \"definitions\" belongs to namespace \"http://www.omg.org/spec/BPMN/20100524/MODEL\". ");
+end
+
+
