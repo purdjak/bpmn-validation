@@ -1,6 +1,3 @@
-/**
- * 
- */
 package validation;
 
 import java.io.File;
@@ -55,6 +52,16 @@ public class Validator {
 	 */
 	public void addValidation(java.io.File resourceFile, ValidationType type, String name) throws ValidationException{
 		validatorEngines.add( ValidationEngineFactory.newValidationEngine(resourceFile, type, name) );
+	}
+	
+	/**
+	 * Calls method addValidation for set of default validations.
+	 * @throws ValidationException
+	 */
+	public void addDefaultValidations() throws ValidationException{
+		this.addValidation(new java.io.File("src//main//rules//xsd//BPMN20.xsd"), ValidationType.XSD, "BPMN 2.0");
+		this.addValidation(new java.io.File("src//main//rules//drl//AttributesValidation.drl"), ValidationType.DRL, "jBPM 5 validation of attributes");
+		this.addValidation(new java.io.File("src//main//rules//drl//ElementValidation.drl"), ValidationType.DRL, "jBPM 5 validation of elements");
 	}
 	
 	/**

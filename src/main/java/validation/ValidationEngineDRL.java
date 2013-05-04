@@ -1,6 +1,3 @@
-/**
- * 
- */
 package validation;
 
 import java.io.File;
@@ -21,11 +18,18 @@ import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
 /**
- * 
+ * This is a implementation of validation engine. It uses DRL for define validation rules.
  */
 class ValidationEngineDRL extends ValidationEngineAbstract {
 	private File DRLFile;
 	
+	/**
+	 * Constructs a new ValidationEngineDRL.
+	 * @param resourceFile Input of validation rules.
+	 * @param type Sets a type of validation.
+	 * @param name Sets name of validation.
+	 * @throws ValidationException
+	 */
 	ValidationEngineDRL(java.io.File resourceFile, ValidationType type, String name) throws ValidationException {
 		super(type, name);
 		this.DRLFile = resourceFile;
@@ -33,7 +37,6 @@ class ValidationEngineDRL extends ValidationEngineAbstract {
 
 	@Override
 	void validate(File in, MessageHandler mHandler) throws ValidationException {
-		// TODO Auto-generated method stub
 		StatefulKnowledgeSession knowledgeSession = createKnowledgeSession(DRLFile);		
 		Document doc = createXMLDocument(in); 
 		
@@ -49,6 +52,12 @@ class ValidationEngineDRL extends ValidationEngineAbstract {
         knowledgeSession.fireAllRules();
 	}
 	
+	/**
+	 * Creates knowledge session for validation.
+	 * @param DRLFile Input of validation rules.
+	 * @return
+	 * @throws ValidationException
+	 */
 	private StatefulKnowledgeSession createKnowledgeSession(java.io.File DRLFile) throws ValidationException{
         //compile the drl
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
@@ -72,6 +81,12 @@ class ValidationEngineDRL extends ValidationEngineAbstract {
         return ksession;
 	}
 	
+	/**
+	 * Parses a input BPMN model.
+	 * @param in BPMN to be validated.
+	 * @return 
+	 * @throws ValidationException
+	 */
 	private Document createXMLDocument(File in) throws ValidationException {		 
 		Document result = null;
 		try {

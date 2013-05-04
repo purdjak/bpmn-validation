@@ -1,7 +1,18 @@
 package validation;
 
+/**
+ * Factory object that can create a new validation engine.
+ */
 class ValidationEngineFactory {
 	
+	/**
+	 * Returns a object that implements the specified parameters.
+	 * @param resourceFile Set of validation rules.
+	 * @param type Format of validation rules.
+	 * @param name Name of the validation. Name will be used in MessageHandler.
+	 * @return Object of validation engine by type.
+	 * @throws ValidationException
+	 */
 	static ValidationEngineAbstract newValidationEngine(java.io.File resourceFile, ValidationType type, String name) throws ValidationException{
 		ValidationEngineAbstract newVE = null;
 		

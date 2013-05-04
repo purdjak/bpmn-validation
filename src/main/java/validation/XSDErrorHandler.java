@@ -4,11 +4,20 @@ import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+/**
+ * Error handler implementation of SAX error handler.
+ */
 class XSDErrorHandler implements ErrorHandler {
 	private ValidationType type;
 	private String name;
 	private MessageHandler mHandler;
 	
+	/**
+	 * Constructs a new XSDErrorHandler.
+	 * @param type
+	 * @param name
+	 * @param mHandler
+	 */
 	protected XSDErrorHandler(ValidationType type, String name, MessageHandler mHandler) {
 		this.type = type;
 		this.name = name;

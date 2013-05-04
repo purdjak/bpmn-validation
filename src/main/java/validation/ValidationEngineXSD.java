@@ -1,6 +1,3 @@
-/**
- * 
- */
 package validation;
 
 import java.io.File;
@@ -12,11 +9,17 @@ import org.jdom2.input.sax.XMLReaderJDOMFactory;
 import org.jdom2.input.sax.XMLReaderXSDFactory;
 
 /**
- * 
+ * This is a implementation of validation engine. It uses XSD for define validation rules.
  */
 class ValidationEngineXSD extends ValidationEngineAbstract {
 	private File XSDFile;
 
+	/**
+	 * Constructs a new ValidationEngineXSD.
+	 * @param resourceFile Input of validation rules.
+	 * @param type Sets a type of validation.
+	 * @param name Sets name of validation.
+	 */
 	ValidationEngineXSD(File resourceFile, ValidationType type, String name) {
 		super(type, name);
 		XSDFile = resourceFile;
