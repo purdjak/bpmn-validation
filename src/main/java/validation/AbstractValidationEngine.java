@@ -3,16 +3,16 @@ package validation;
 /**
  * This class provides a skeletal implementation of the validation engine. 
  */
-abstract class ValidationEngineAbstract {
+abstract class AbstractValidationEngine {
 	protected ValidationType type;
 	protected String name;
 	
 	/**
-	 * Constructs a new ValidationEngineAbstract.
+	 * Constructs a new AbstractValidationEngine.
 	 * @param type Sets a type of validation.
 	 * @param name Sets name of validation.
 	 */
-	ValidationEngineAbstract(ValidationType type, String name){
+	AbstractValidationEngine(ValidationType type, String name){
 		this.type = type;
 		this.name = name;
 	}

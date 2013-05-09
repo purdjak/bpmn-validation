@@ -11,7 +11,7 @@ import org.jdom2.input.sax.XMLReaderXSDFactory;
 /**
  * This is a implementation of validation engine. It uses XSD for define validation rules.
  */
-class ValidationEngineXSD extends ValidationEngineAbstract {
+class ValidationEngineXSD extends AbstractValidationEngine {
 	private File XSDFile;
 
 	/**

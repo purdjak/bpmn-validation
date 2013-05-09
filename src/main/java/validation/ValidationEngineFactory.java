@@ -13,8 +13,8 @@ class ValidationEngineFactory {
 	 * @return Object of validation engine by type.
 	 * @throws ValidationException
 	 */
-	static ValidationEngineAbstract newValidationEngine(java.io.File resourceFile, ValidationType type, String name) throws ValidationException{
-		ValidationEngineAbstract newVE = null;
+	static AbstractValidationEngine newValidationEngine(java.io.File resourceFile, ValidationType type, String name) throws ValidationException{
+		AbstractValidationEngine newVE = null;
 		
 		switch(type){
 		case XSD :

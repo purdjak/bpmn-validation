@@ -9,7 +9,7 @@ import java.util.List;
  * A processor that checks BPMN model against validation rules.
  */
 public class Validator {
-	private List <ValidationEngineAbstract> validatorEngines;
+	private List <AbstractValidationEngine> validatorEngines;
 	private MessageHandler mHandler;
 	
 	/**
@@ -83,7 +83,7 @@ public class Validator {
 	 * @throws ValidationException
 	 */
 	public void validate(java.io.File in) throws ValidationException {
-		for(ValidationEngineAbstract va : validatorEngines){			
+		for(AbstractValidationEngine va : validatorEngines){			
 				va.validate(in, mHandler);			
 		}
 	}

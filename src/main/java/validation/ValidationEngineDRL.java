@@ -20,7 +20,7 @@ import org.jdom2.input.SAXBuilder;
 /**
  * This is a implementation of validation engine. It uses DRL for define validation rules.
  */
-class ValidationEngineDRL extends ValidationEngineAbstract {
+class ValidationEngineDRL extends AbstractValidationEngine {
 	private File DRLFile;
 	
 	/**
